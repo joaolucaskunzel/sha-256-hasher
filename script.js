@@ -15,8 +15,11 @@ async function hashStringToBase64(input) {
 
 function hashAndDisplay() {
     const inputText = document.getElementById('inputText').value;
+    const numChars = parseInt(document.getElementById('numChars').value, 10) || Infinity;
+
     hashStringToBase64(inputText).then(base64Hash => {
-        document.getElementById('result').textContent = base64Hash;
+        const truncatedHash = base64Hash.substring(0, numChars);
+        document.getElementById('result').textContent = truncatedHash;
     }).catch(err => {
         document.getElementById('result').textContent = 'Error: ' + err.message;
     });
