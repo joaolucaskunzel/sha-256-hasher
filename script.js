@@ -19,7 +19,7 @@ function hashAndDisplay() {
 
     hashStringToBase64(inputText).then(base64Hash => {
         const truncatedHash = base64Hash.substring(0, numChars);
-        document.getElementById('result').textContent = truncatedHash;
+        document.getElementById('result').textContent = numChars;
     }).catch(err => {
         document.getElementById('result').textContent = 'Error: ' + err.message;
     });
