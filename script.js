@@ -15,7 +15,7 @@ async function hashStringToBase64(input) {
 
 function hashAndDisplay() {
     const inputText = document.getElementById('inputText').value;
-    const numChars = parseInt(document.getElementById('numChars').value, 10) || Infinity;
+    const numChars = parseInt(document.getElementById('numChars').value, 10);
 
     hashStringToBase64(inputText).then(base64Hash => {
         const truncatedHash = base64Hash.substring(0, numChars);
