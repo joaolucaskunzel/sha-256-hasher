@@ -9,8 +9,10 @@
 <body>
     <div class="container">
         <h1>SHA-256 Hash to Base64</h1>
+		<div>Enter text to hash:</div>
         <input type="text" id="inputText" placeholder="Enter text to hash" />
-        <input type="number" id="numChars" placeholder="Number of characters" />
+		<div>Max number of characters to display:</div>
+        <input type="number" id="numChars" placeholder="Number of characters" value="15"/>
         <button onclick="hashAndDisplay()">Hash and Convert</button>
         <div id="result"></div>
     </div>
